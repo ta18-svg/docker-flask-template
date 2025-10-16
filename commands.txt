@@ -1,0 +1,6 @@
+\
+    # Single (Flask only) template commands
+    docker build -t flask-docker-app .
+    docker run -d -p 5000:5000 --name flask-app flask-docker-app
+    docker logs -f flask-app
+    docker stop flask-app && docker rm flask-app
